@@ -1,0 +1,62 @@
+.products {
+  background-color: $color-black-pearl;
+
+  padding-bottom: 140px;
+
+  &__title {
+    font-family: "Roboto Condensed";
+    color: $color-default-white;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 85px;
+  }
+
+  &__card {
+    position: relative;
+
+    &-title {
+      margin: 0;
+      position: absolute;
+      top: 50px;
+      left: 40px;
+      font-family: "Roboto Condensed";
+      color: $color-default-white;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+    }
+
+    &-button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: $color-deep-sky-blue;
+      width: 60px;
+      height: 60px;
+      border-top-left-radius: 3px;
+      border: none;
+    }
+  }
+}
+
+.products__img {
+  width: 100%;
+}
+
+@include vp-1023 {
+  .products {
+    &__container {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-gap: 30px;
+      grid-template-columns: none;
+    }
+  }
+}

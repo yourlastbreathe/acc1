@@ -1,0 +1,65 @@
+.header {
+  background-color: $color-black-pearl;
+  color: $color-default-white;
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  align-items: center;
+  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__contacts {
+    display: flex;
+    list-style: none;
+    font-family: "PT Mono";
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+
+    &-link {
+      color: $color-default-white;
+      width: 225px;
+      display: block;
+    }
+  }
+
+  &__button {
+    background-color: $color-transparent;
+    font-family: "Roboto Condensed";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    border: $color-default-white solid 1px;
+    border-radius: 3px;
+    color: $color-default-white;
+    padding: 10px 15px;
+    box-sizing: border-box;
+  }
+
+}
+
+@include vp-1023 {
+  .header__contacts-link--text {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__contacts-link {
+    width: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .header__contacts-list {
+    gap: 20px;
+  }
+}
